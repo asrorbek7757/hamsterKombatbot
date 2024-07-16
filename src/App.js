@@ -2,6 +2,12 @@ import React from 'react';
 import './HamsterKombat.css'; 
 
 function App() {
+  const inviteFriendHandler = () => {
+    const friendName = 'Е\'тибор Рахмонова'; 
+    const chatLink = `https://t.me/${friendName}`; 
+    window.open(chatLink, '_blank'); 
+  };
+
   return (
     <div className="app">
       <div className="header">
@@ -17,6 +23,9 @@ function App() {
           <div className="invite-details">
             <h3>Invite a friend</h3>
             <p>+5,000 for you and your friend</p>
+            <button className="invite-button" onClick={inviteFriendHandler}>
+              Invite a friend
+            </button>
           </div>
         </div>
         <div className="invite-option">
@@ -38,11 +47,10 @@ function App() {
             </div>
           </div>
         </div>
-        <button className="invite-button">Invite a friend</button>
       </div>
       <div className="footer">
         <span>🏦 Exchange</span>
-        <span>⛏️ Mine</span>
+        <span>⛏ Mine</span>
         <span>👥 Friends</span>
         <span>💰 Earn</span>
         <span>🎁 Airdrop</span>
